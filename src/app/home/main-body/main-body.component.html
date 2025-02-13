@@ -1,0 +1,332 @@
+<div class="w-full pb-20">
+    <section class="w-[1400px] gap-x-10 pt-[100px] flex bg-[#fafafa] mx-auto">
+        <section class="w-[240px] rounded-[12px] h-fit bg-white">
+            <!-- category -->
+            <div class="p-[16px] pb-5">
+                <h3 class="text-[#757575] font-bold">Category</h3>
+
+                <div class="radio-group pl-[10px] pt-2">
+                    <label *ngFor="let category of categories"
+                        ><input
+                            type="radio"
+                            class="text-[14px] font-semibold"
+                            name="category"
+                            [value]="category"
+                            [(ngModel)]="selectedCategory"
+                            [checked]="selectedCategory === category"
+                        />
+                        {{ category }}</label
+                    >
+                    <!-- <label
+                        ><input
+                            type="radio"
+                            name="category"
+                            class="text-[14px] font-semibold"
+                            value="Music"
+                        />
+                        Music</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="category"
+                            class="text-[14px] font-semibold"
+                            value="Shopping"
+                            checked
+                        />
+                        Shopping</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="category"
+                            class="text-[14px] font-semibold"
+                            value="Ride"
+                        />
+                        Ride</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="category"
+                            class="text-[14px] font-semibold"
+                            value="e-commerce"
+                        />
+                        E-Commerce</label
+                    > -->
+                </div>
+            </div>
+
+            <!-- price -->
+            <div class="border-[#E0E0E0] py-8 px-[16px] border-y-[1px]">
+                <div class="text-[#757575] font-bold">Price</div>
+                <div class="slider-container">
+                    <input
+                        type="range"
+                        min="1000"
+                        max="500000"
+                        step="1000"
+                        value="250000"
+                    />
+                    <div class="price-inputs">
+                        <span>1,000</span>
+                        <span>500,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- percentage -->
+            <div class="p-[16px]">
+                <h3 class="text-[#757575] font-bold">Percentage</h3>
+
+                <div class="radio-group pl-[10px] pt-2">
+                    <label
+                        ><input type="radio" name="discount" value="free" />
+                        Free</label
+                    >
+                    <label
+                        ><input type="radio" name="discount" value="0-10" /> 0 -
+                        10%</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="discount"
+                            value="10-25"
+                            checked
+                        />
+                        10 - 25%</label
+                    >
+                    <label
+                        ><input type="radio" name="discount" value="35-50" /> 35
+                        - 50%</label
+                    >
+                    <label
+                        ><input type="radio" name="discount" value="50-65" /> 50
+                        - 65%</label
+                    >
+                    <label
+                        ><input type="radio" name="discount" value="65-above" />
+                        65% & Above</label
+                    >
+                </div>
+            </div>
+
+            <div class="p-[16px]">
+                <h3 class="text-[#757575] font-bold">Location</h3>
+
+                <div class="radio-group pl-[10px] pt-2">
+                    <label
+                        ><input
+                            type="radio"
+                            name="discount"
+                            value="lagos"
+                            checked
+                        />Lagos</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="discount"
+                            value="ogun"
+                        />Ogun</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="discount"
+                            value="oyo"
+                        />Oyo</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="discount"
+                            value="35-50"
+                        />Abuja</label
+                    >
+                    <label
+                        ><input
+                            type="radio"
+                            name="discount"
+                            value="50-65"
+                        />Port Harcourt</label
+                    >
+                    <label
+                        ><input type="radio" name="discount" value="65-above" />
+                        65% & Above</label
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN BODY -->
+
+        <section class="flex-1 items-center justify-center">
+
+            <div class="flex items-center justify-between gap-6 w-full">
+                <!-- Search Bar -->
+                <div
+                    class="flex items-center w-full flex-1 border border-gray-300 rounded-full px-4 py-3"
+                >
+                    <input
+                        type="text"
+                        placeholder="Search for store items"
+                        class="w-full outline-none bg-transparent text-gray-600 placeholder-gray-500"
+                    />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-5 h-5 text-gray-500"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 15l5 5m-5-5a7 7 0 1 0-10 0 7 7 0 0 0 10 0"
+                        />
+                    </svg>
+                </div>
+
+                <!-- Sort Dropdown -->
+                <div class="flex items-center text-[18px] gap-2 text-gray-800">
+                    <span class="font-semibold">Sort By:</span>
+                    <span class="text-gray-600">Newest to oldest</span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-4 h-4 text-purple-500"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                        />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- data items -->
+
+            <div class="grid grid-cols-4 gap-5 pt-8">
+                <div
+                    *ngFor="let item of paginatedItems"
+                    class="w-full py-[24px] px-[16px] bg-[#FAF7FD] rounded-xl shadow-md border border-[#E0E0E0]"
+                >
+                    <div class="flex items-center justify-between">
+                        <img src="{{ item.brand.logo }}" class="w-8 h-8" />
+                        <div class="text-purple-600">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                class="w-5 h-5 inline"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M14.353 11.646a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.707-.707L13.293 12l-2.647-2.646a.5.5 0 0 1 .707-.708l3 3z"
+                                />
+                            </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                class="w-5 h-5 inline"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 class="mt-3 text-lg font-semibold text-gray-800">
+                        {{ item.brand.name }}
+                        <span class="text-gray-600">-20%</span>
+                    </h2>
+                    <p class="mt-2 text-sm text-gray-600">
+                        {{ item.description.slice(0, 40) }}
+                    </p>
+                    <button
+                        class="mt-4 w-full py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg flex items-center justify-center gap-1 hover:bg-gray-100"
+                    >
+                        See Offer
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            class="w-4 h-4"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7"
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+           <div class="w-full mt-10">
+  <!-- Display Current Items -->
+  <!-- <ul>
+    <li *ngFor="let item of paginatedItems" class="p-2 border-b border-gray-200">
+      {{ item }}
+    </li>
+  </ul> -->
+
+  <!-- Pagination Controls -->
+  <div class="flex items-center justify-between px-4 py-3 font-semibold mt-4">
+    <!-- Pagination Info -->
+    <div class="text-gray-500 text-sm">
+      {{ (page - 1) * itemsPerPage + 1 }} - {{ page * itemsPerPage > data.length ? data.length : page * itemsPerPage }} of {{ totalPages }} pages
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="flex items-center space-x-2">
+      <!-- Previous Button -->
+      <button (click)="changePage(page - 1)" 
+              [disabled]="page === 1"
+              class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 disabled:opacity-50">
+        &lt;
+      </button>
+
+      <!-- Page Numbers -->
+      <button *ngFor="let p of getPageNumbers()"
+              (click)="changePage(p)"
+              [class.border-b-2]="page === p"
+              [class.border-purple-500]="page === p"
+              [class.text-gray-900]="page === p"
+              [class.font-semibold]="page === p"
+              class="px-3 py-1 text-gray-500 hover:text-gray-900">
+        {{ p }}
+      </button>
+
+      <!-- Dots -->
+      <span *ngIf="totalPages > 5" class="px-3 py-1 text-gray-500">...</span>
+
+      <!-- Next Button -->
+      <button (click)="changePage(page + 1)" 
+              [disabled]="page === totalPages"
+              class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100">
+        &gt;
+      </button>
+    </div>
+  </div>
+</div>
+
+        </section>
+
+
+        
+    </section>
+</div>
